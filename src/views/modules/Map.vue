@@ -92,6 +92,7 @@ import ReviewRating from '../../components/ReviewRating.vue';
 import CardMapHeader from "../modules/CardMapHeader.vue";
 import mapStyleDark from "./mapstyle/dark";
 import mapStyleLight from "./mapstyle/light";
+import vyberPetrzalka from "../../../src/assets/images/pokrok-vybeh.png";
 export default {
   name: "App",
   components: {
@@ -120,7 +121,7 @@ export default {
           rating: 4.5,
           name: "Park pre psov - Pokrok",
           desc: "Oploteny vyber pre psov bla bla",
-          img: "../../../src/assets/images/pokrok-vybeh.png",
+          img: vyberPetrzalka,
           position: {
             lat: 48.166525,
             lng: 17.122163,
