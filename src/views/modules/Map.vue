@@ -92,7 +92,9 @@ import ReviewRating from '../../components/ReviewRating.vue';
 import CardMapHeader from "../modules/CardMapHeader.vue";
 import mapStyleDark from "./mapstyle/dark";
 import mapStyleLight from "./mapstyle/light";
-import vyberPetrzalka from "../../../src/assets/images/pokrok-vybeh.png";
+import vyberPokrok from "../../../src/assets/images/pokrok-vybeh.png";
+import vyberPetrzalka from "../../../src/assets/images/petrzalka-vybeh.png";
+import vyberPolna from "../../../src/assets/images/polna-vybeh.png";
 export default {
   name: "App",
   components: {
@@ -121,7 +123,7 @@ export default {
           rating: 4.5,
           name: "Park pre psov - Pokrok",
           desc: "Oploteny vyber pre psov bla bla",
-          img: vyberPetrzalka,
+          img: vyberPokrok,
           position: {
             lat: 48.166525,
             lng: 17.122163,
@@ -132,7 +134,7 @@ export default {
           rating: 5,
           name: "Psí Park Petržalka",
           desc: "Oploteny vyber pre psov bla bla",
-          img: "../../../src/assets/images/petrzalka-vybeh.png",
+          img: vyberPetrzalka,
           position: {
             lat: 48.1243532,
             lng: 17.1028739,
@@ -143,7 +145,7 @@ export default {
           rating: 3.4,
           name: "Psí Park Polna",
           desc: "Vybeh v meste pri contorine",
-          img: "../../../src/assets/images/polna-vybeh.png",
+          img: vyberPolna,
           position: {
             lat: 48.149278,
             lng: 17.124715,
