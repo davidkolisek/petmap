@@ -80,7 +80,7 @@
         :desc="m.desc"
       >
         <button @click="closeCard"></button>
-        <review-rating v-bind:ratingNumber="m.rating"/>
+        <review-rating v-bind:ratingNumber="m.rating" />
       </BaseCard>
     </div>
   </div>
@@ -88,13 +88,28 @@
 
 <script>
 import BaseCard from "../../components/BaseCard.vue";
-import ReviewRating from '../../components/ReviewRating.vue';
+import ReviewRating from "../../components/ReviewRating.vue";
 import CardMapHeader from "../modules/CardMapHeader.vue";
 import mapStyleDark from "./mapstyle/dark";
 import mapStyleLight from "./mapstyle/light";
-import vyberPokrok from "../../../src/assets/images/pokrok-vybeh.png";
-import vyberPetrzalka from "../../../src/assets/images/petrzalka-vybeh.png";
-import vyberPolna from "../../../src/assets/images/polna-vybeh.png";
+import vyberPokrok from "../../../src/assets/images/vybeh-pokrok.jpg";
+import vyberPanonska from "../../../src/assets/images/vybeh-panonska.jpg";
+import vyberPolna from "../../../src/assets/images/vybeh-polna.jpg";
+import vyberVysehradska from "../../../src/assets/images/vybeh-vysehradska.jpg";
+import vyberHolicska from "../../../src/assets/images/vybeh-holicska.jpg";
+import vyberSienkiewiczova from "../../../src/assets/images/vybeh-sienkiewiczova.jpg";
+import vyberDostojevskeho from "../../../src/assets/images/vybeh-dostojevskeho.jpg";
+import vybehJurajov from "../../../src/assets/images/vybeh-jurajov.jpg";
+import vybehPalarikova from "../../../src/assets/images/vybeh-palarikova.jpg";
+import vybehBrezovska from "../../../src/assets/images/vybeh-brezovska.jpg";
+import vybehCernockeho from "../../../src/assets/images/vybeh-cernockeho.jpg";
+import vybehDrienova from "../../../src/assets/images/vybeh-drienova.jpg";
+import vybehTomasikova from "../../../src/assets/images/vybeh-tomasikova.jpg";
+import vybehSyslia from "../../../src/assets/images/vybeh-syslia.jpg";
+import vybehAstronomicka from "../../../src/assets/images/vybeh-astronomicka.jpg";
+import vybehVrakunska from "../../../src/assets/images/vybeh-vrakunska.jpg";
+import vybehMelickovej from "../../../src/assets/images/vybeh-melickovej.jpg";
+import vybehStudenohorska from "../../../src/assets/images/vybeh-studenohorska.jpg";
 export default {
   name: "App",
   components: {
@@ -122,7 +137,7 @@ export default {
           id: 1,
           rating: 4.5,
           name: "Park pre psov - Pokrok",
-          desc: "Oploteny vyber pre psov bla bla",
+          desc: "Výber - Nové mesto",
           img: vyberPokrok,
           position: {
             lat: 48.166525,
@@ -132,9 +147,9 @@ export default {
         {
           id: 2,
           rating: 5,
-          name: "Psí Park Petržalka",
-          desc: "Oploteny vyber pre psov bla bla",
-          img: vyberPetrzalka,
+          name: "Psí Park Petržalka - Panónska",
+          desc: "Výber - Petržalka",
+          img: vyberPanonska,
           position: {
             lat: 48.1243532,
             lng: 17.1028739,
@@ -143,12 +158,177 @@ export default {
         {
           id: 3,
           rating: 3.4,
-          name: "Psí Park Polna",
-          desc: "Vybeh v meste pri contorine",
+          name: "Psí Park Poľná - Poľná",
+          desc: " Výber - Staré Mesto",
           img: vyberPolna,
           position: {
             lat: 48.149278,
             lng: 17.124715,
+          },
+        },
+        {
+          id: 4,
+          rating: 4.7,
+          name: "Oplotený výbeh psov - Vyšehradská",
+          desc: "Výber - Petržalka",
+          img: vyberVysehradska,
+          position: {
+            lat: 48.0958536,
+            lng: 17.103603,
+          },
+        },
+        {
+          id: 5,
+          rating: 4.7,
+          name: "Oplotený výbeh psov - Holičská",
+          desc: "Výber - Petržalka",
+          img: vyberHolicska,
+          position: {
+            lat: 48.10905,
+            lng: 17.103998,
+          },
+        },
+        {
+          id: 6,
+          rating: 4,
+          name: "Park pre psov - Sienkiewiczova",
+          desc: "Výber - Staré Mesto",
+          img: vyberSienkiewiczova,
+          position: {
+            lat: 48.1428349,
+            lng: 17.1158828,
+          },
+        },
+        {
+          id: 7,
+          rating: 4.3,
+          name: "Psi park - Dostojevského",
+          desc: "Výber - Staré Mesto",
+          img: vyberDostojevskeho,
+          position: {
+            lat: 48.1432212,
+            lng: 17.1225564,
+          },
+        },
+        {
+          id: 8,
+          rating: 4.3,
+          name: "Psí Park - Jurajov výbeh - Lehockého",
+          desc: "Výber - Staré Mesto",
+          img: vybehJurajov,
+          position: {
+            lat: 48.1547757,
+            lng: 17.1130657,
+          },
+        },
+        {
+          id: 9,
+          rating: 4.3,
+          name: "Výbeh pre psov - Palárikova",
+          desc: "Výber - Staré Mesto",
+          img: vybehPalarikova,
+          position: {
+            lat: 48.1578902,
+            lng: 17.1084653,
+          },
+        },
+        {
+          id: 10,
+          rating: 4,
+          name: "Výbeh pre psov - Brezovská",
+          desc: "Výber - Nové Mesto",
+          img: vybehBrezovska,
+          position: {
+            lat: 48.1734375,
+            lng: 17.1334613,
+          },
+        },
+        {
+          id: 11,
+          rating: 4.8,
+          name: "Agility ihrisko - Černockého",
+          desc: "Výber - Rača",
+          img: vybehCernockeho,
+          position: {
+            lat: 48.2002733,
+            lng: 17.1474907,
+          },
+        },
+        {
+          id: 12,
+          rating: 4.7,
+          name: "Oplotený výbeh pre psov - Drieňová",
+          desc: "Výber - Ružinov",
+          img: vybehDrienova,
+          position: {
+            lat: 48.1599893,
+            lng: 17.1493881,
+          },
+        },
+        {
+          id: 13,
+          rating: 4.6,
+          name: "Oplotený výbeh pre psov Ružinov",
+          desc: "Výber - Ružinov",
+          img: vybehTomasikova,
+          position: {
+            lat: 48.1586533,
+            lng: 17.1626927,
+          },
+        },
+        {
+          id: 14,
+          rating: 5,
+          name: "Výbeh pre psov Prievoz - Syslia",
+          desc: "Výber - Ružinov",
+          img: vybehSyslia,
+          position: {
+            lat: 48.1429825,
+            lng: 17.1690464,
+          },
+        },
+        {
+          id: 15,
+          rating: 4.3,
+          name: "Výbeh pre psy - Astronomická",
+          desc: "Výber - Ružinov",
+          img: vybehAstronomicka,
+          position: {
+            lat: 48.1604001,
+            lng: 17.1777978,
+          },
+        },
+        {
+          id: 16,
+          rating: 4,
+          name: "Psí Park Karlova ves - Hany Meličkovej",
+          desc: "Výber - Karlova ves",
+          img: vybehMelickovej,
+          position: {
+            lat: 48.149027,
+            lng: 17.051787,
+          },
+        },
+        {
+          id: 17,
+          rating: 5,
+          name: "Psí Park Lamač - Studenohorská",
+          desc: "Výber - Lamač",
+          img: vybehStudenohorska,
+          position: {
+            lat: 48.194246,
+            lng: 17.055165,
+          },
+        },
+        {
+          id: 18,
+          rating: 4,
+          name: "Psí Park Podunajské Biskupice - Vrakunská",
+          desc: "Výber - Podunajské Biskupice",
+          img: vybehVrakunska,
+          position: {
+            lat: 48.1372075,
+            lng: 17.2000673,
           },
         },
       ],
@@ -196,8 +376,8 @@ export default {
   height: calc(100% - 77px);
   position: relative;
   z-index: 1;
-  @media(max-width: 768px){
-  height: calc(100% - 56px);
+  @media (max-width: 768px) {
+    height: calc(100% - 56px);
   }
 }
 .scroll-wrapper {
@@ -214,8 +394,8 @@ export default {
     border-right: 1px solid #eee;
     max-width: 260px;
     transition: all ease 250ms;
-    @media(max-width:768px){
-    top: 55px;
+    @media (max-width: 768px) {
+      top: 55px;
     }
 
     &.active {
