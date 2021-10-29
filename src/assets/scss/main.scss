@@ -1,0 +1,58 @@
+@import 'base/index';
+$primary-color: #463bdd;
+$secondary-color: #1f3052;
+
+body,html{
+  width:100%;
+  height: 100%;
+  padding: 1rem;
+  background: #f5f6fa;
+  @media(max-width:991px){
+    padding: 0;
+  }
+}
+
+#app {
+  font-family: 'Roboto Condensed', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  width:100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.card{
+  display: none;
+}
+.active{
+  display: block;
+}
+
+.main-container{
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+.main-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 -10px;
+  .main-col{
+      flex: 1 1 120px;
+        margin: 10px;
+  }   
+}
+
+.main-label {
+  text-transform: uppercase;
+  color: #ccc;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0 0 .5rem;
+}
