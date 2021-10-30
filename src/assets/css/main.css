@@ -129,4 +129,13 @@ body, html {
   margin: 0 0 0.5rem;
 }
 
+.cluster img {
+  width: 100%;
+  height: auto;
+  border-radius: 99px;
+}
+.cluster div span {
+  color: #fff;
+}
+
 /*# sourceMappingURL=main.css.map */

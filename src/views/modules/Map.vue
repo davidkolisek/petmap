@@ -31,6 +31,7 @@
       style="width: 100vw; height: 100vh"
       :class="testBol === false ? 'd-none' : 'd-block'"
     >
+    <GMapCluster>
       <GMapMarker
         :key="index"
         v-for="(m, index) in markers"
@@ -44,6 +45,7 @@
         }"
       >
       </GMapMarker>
+    </GMapCluster>
     </GMapMap>
 
     <GMapMap
@@ -54,6 +56,7 @@
       style="width: 100vw; height: 100vh"
       :class="testBol === true ? 'd-none' : 'd-block'"
     >
+    <GMapCluster :minimumClusterSize="2" :styles="clusterIcon" :zoomOnClick="true">
       <GMapMarker
         :key="index"
         v-for="(m, index) in markers"
@@ -67,6 +70,7 @@
         }"
       >
       </GMapMarker>
+    </GMapCluster>
     </GMapMap>
 
     <div class="scroll-wrapper">
