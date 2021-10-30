@@ -1,6 +1,6 @@
 <template>
   <div class="map-card-wrapper">
-    <CardMapHeader title="Mapa výbehov pre psov">
+    <CardMapHeader title="Mapa výbehov pre psov" subtitle="Bratislava">
       <button
         @click="testToggle"
         :class="
@@ -24,7 +24,7 @@
     </CardMapHeader>
 
     <GMapMap
-      :center="{ lat: 48.1356952, lng: 17.0403788 }"
+      :center="{ lat: 48.1432912, lng: 17.1134732 }"
       :zoom="12"
       v-bind:options="optionsDark"
       map-type-id="terrain"
@@ -33,7 +33,6 @@
     >
       <GMapMarker
         :key="index"
-        class="asds"
         v-for="(m, index) in markers"
         :position="m.position"
         :clickable="true"
@@ -48,7 +47,7 @@
     </GMapMap>
 
     <GMapMap
-      :center="{ lat: 48.1356952, lng: 17.0403788 }"
+      :center="{ lat: 48.1432912, lng: 17.1134732 }"
       :zoom="12"
       v-bind:options="optionsLight"
       map-type-id="terrain"

@@ -2,6 +2,7 @@
   <div class="map-header">
     <div class="header-col">
       <h4 class="map-header-title">{{ title }}</h4>
+      <span class="map-header-subtitle">{{ subtitle }}</span>
     </div>
     <div class="header-col">
       <slot />
@@ -19,6 +20,7 @@ export default {
   name: "CardMapHeader",
   props: {
     title: "",
+    subtitle: "",
   },
   data() {
     return {};
@@ -78,6 +80,10 @@ export default {
   .map-header-title {
     margin: 0;
     font-weight: 600;
+  }
+  .map-header-subtitle {
+    margin: 0;
+    font-size: .8rem;
   }
 }
 </style>
