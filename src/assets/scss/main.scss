@@ -5,8 +5,11 @@ $secondary-color: #1f3052;
 body,html{
   width:100%;
   height: 100%;
-  padding: 1rem;
   background: #f5f6fa;
+}
+
+body {
+  padding: 1rem;
   @media(max-width:991px){
     padding: 0;
   }

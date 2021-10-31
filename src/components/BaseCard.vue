@@ -5,9 +5,9 @@
     </div>
     <div class="base-card-content">
       <h5>{{ title }}</h5>
-      <p>
+      <span class="sub-title">
         {{ desc }}
-      </p>
+      </span>
       <slot />
     </div>
   </div>
@@ -20,6 +20,7 @@ export default {
     imageUrl: String,
     title: String,
     desc: String,
+    address: String,
   },
   data() {
     return {};
@@ -32,8 +33,15 @@ export default {
   background: #fff;
   z-index: 3;
   max-width: 260px;
-  h5{
+  .sub-title {
+    font-size: 0.9rem;
+    color: #ccc;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  h5 {
     font-weight: bold;
+    margin-bottom: 0;
   }
   .img-wrapper {
     width: 100%;

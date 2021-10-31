@@ -49,6 +49,14 @@ export default {
     width: 100%;
 
     &:nth-child(1) {
+        @media (max-width: 768px) {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          span {
+            display: none;
+          }
+        }
       h4 {
         @media (max-width: 768px) {
           font-size: 1.2rem;
