@@ -31,21 +31,19 @@
       style="width: 100vw; height: 100vh"
       :class="testBol === false ? 'd-none' : 'd-block'"
     >
-    <GMapCluster>
-      <GMapMarker
-        :key="index"
-        v-for="(m, index) in markers"
-        :position="m.position"
-        :clickable="true"
-        @click="toggleCard(m.id)"
-        :icon="{
-          url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Creative-Tail-Animal-dog.svg/1024px-Creative-Tail-Animal-dog.svg.png',
-          scaledSize: { width: 50, height: 50 },
-          labelOrigin: { x: 16, y: -10 },
-        }"
-      >
-      </GMapMarker>
-    </GMapCluster>
+        <GMapMarker
+          :key="index"
+          v-for="(m, index) in markers"
+          :position="m.position"
+          :clickable="true"
+          @click="toggleCard(m.id)"
+          :icon="{
+            url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Creative-Tail-Animal-dog.svg/1024px-Creative-Tail-Animal-dog.svg.png',
+            scaledSize: { width: 50, height: 50 },
+            labelOrigin: { x: 16, y: -10 },
+          }"
+        >
+        </GMapMarker>
     </GMapMap>
 
     <GMapMap
@@ -56,21 +54,19 @@
       style="width: 100vw; height: 100vh"
       :class="testBol === true ? 'd-none' : 'd-block'"
     >
-    <GMapCluster :minimumClusterSize="2" :styles="clusterIcon" :zoomOnClick="true">
-      <GMapMarker
-        :key="index"
-        v-for="(m, index) in markers"
-        :position="m.position"
-        :clickable="true"
-        @click="toggleCard(m.id)"
-        :icon="{
-          url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Creative-Tail-Animal-dog.svg/1024px-Creative-Tail-Animal-dog.svg.png',
-          scaledSize: { width: 50, height: 50 },
-          labelOrigin: { x: 16, y: -10 },
-        }"
-      >
-      </GMapMarker>
-    </GMapCluster>
+        <GMapMarker
+          :key="index"
+          v-for="(m, index) in markers"
+          :position="m.position"
+          :clickable="true"
+          @click="toggleCard(m.id)"
+          :icon="{
+            url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Creative-Tail-Animal-dog.svg/1024px-Creative-Tail-Animal-dog.svg.png',
+            scaledSize: { width: 50, height: 50 },
+            labelOrigin: { x: 16, y: -10 },
+          }"
+        >
+        </GMapMarker>
     </GMapMap>
 
     <div class="scroll-wrapper">
@@ -95,6 +91,7 @@ import ReviewRating from "../../components/ReviewRating.vue";
 import CardMapHeader from "../modules/CardMapHeader.vue";
 import mapStyleDark from "./mapstyle/dark";
 import mapStyleLight from "./mapstyle/light";
+import clusterImg from "../../../src/assets/images/vybeh-pokrok.jpg";
 import vyberPokrok from "../../../src/assets/images/vybeh-pokrok.jpg";
 import vyberPanonska from "../../../src/assets/images/vybeh-panonska.jpg";
 import vyberPolna from "../../../src/assets/images/vybeh-polna.jpg";
@@ -124,6 +121,7 @@ export default {
     const openedMarker = null;
     const test = false;
     return {
+      clusterImg: clusterImg,
       testBol: test,
       styleLightMap: mapStyleLight,
       styleDarkMap: mapStyleDark,
@@ -361,6 +359,17 @@ export default {
       } else {
         this.testBol = false;
       }
+    },
+    replaceSrc() {
+      const cluster = document.querySelectorAll(".cluster");
+      console.log(cluster + 1);
+      console.log(1);
+    },
+    created() {
+      this.replaceSrc();
+    },
+    mounted() {
+      this.replaceSrc();
     },
   },
 };
