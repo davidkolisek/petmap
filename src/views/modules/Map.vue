@@ -318,8 +318,8 @@ export default {
             "https://www.google.com/maps/place/Oploten%C3%BD+v%C3%BDbeh+pre+psov+Ru%C5%BEinov/@48.1579938,17.1631568,19.71z/data=!4m5!3m4!1s0x476c8faa70603e75:0xb4a3a6781608206c!8m2!3d48.1579884!4d17.1632736",
           img: vybehTomasikova,
           position: {
-            lat: 48.1586533,
-            lng: 17.1626927,
+            lat: 48.157981,
+            lng: 17.163274,
           },
         },
         {
